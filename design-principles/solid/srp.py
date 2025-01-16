@@ -1,7 +1,7 @@
 ### --- Single Responsibility Principle --- ###
 
-# A class should have only one reason to change.
 # A class should have only one job.
+# A class should have only one reason to change.
 
 # Benefits:
 # - More maintainable code
@@ -15,7 +15,6 @@
 # - It is hard to make unit tests
 # - Code duplication
 
-import os
 from dataclasses import dataclass
 
 
@@ -40,6 +39,7 @@ class PaymentProcessor:
                 "currency": "usd",
                 "source": payment_data["source"],
                 "description": customer_data["name"],
+                "status": "succeeded",
             }
             print("Payment successful")
         except Exception as e:
