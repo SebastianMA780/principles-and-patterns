@@ -85,7 +85,7 @@ class PaymentProcessor:
 
 # Validation Responsibility
 @dataclass
-class CustomerValidator:
+class CustomerValidation:
 		def validate(self, customer_data):
 				if not customer_data.get("name"):
 						print("Invalid customer data: missing name")
@@ -97,7 +97,7 @@ class CustomerValidator:
 
 # Validation Responsibility                          
 @dataclass
-class PaymentDataValidator:
+class PaymentDataValidation:
 		def validate(self, payment_data):
 				if not payment_data.get("source"):
 						print("Invalid payment data")
@@ -163,8 +163,8 @@ class PaymentService:
         payment_processor = PaymentProcessorV2()
         notifier = Notifier()
         logger = TransactionLogger()
-        customer_validator: CustomerValidator()
-        payment_data_validator: PaymentDataValidator()
+        customer_validator = CustomerValidation()
+        payment_validator = PaymentDataValidation()
 
         def process_transaction(self, customer_data, payment_data):
                 try:
@@ -189,7 +189,13 @@ class PaymentService:
                 
                    
 if __name__ == "__main__":
-    payment_processor = PaymentProcessor()
+
+    # Use PaymentProcessor v1 
+    #payment_processor = PaymentProcessor()
+
+    # Use PaymentService v2
+    payment_processor = PaymentService()
+
 
     customer_data_with_email = {
         "name": "John Doe",
