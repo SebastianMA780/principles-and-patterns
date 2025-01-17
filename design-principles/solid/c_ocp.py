@@ -13,9 +13,14 @@
 
 
 ### --- 
-# See 1_srp.py where ocp is not applied for  Notifier and PaymentProcessor classes
+# See b_srp.py where ocp is not applied for  Notifier and PaymentProcessor classes
 # and compare with te code below to see the improvement.
 # --- ###
+
+# abc module provides the ABC class which is used to create abstract classes,
+# In Python an abstract class is a class that can have abstract methods and methods that are implemented.
+# This class can have attributes and states as well.
+# Python does not have interfaces like other languages, instead ABC is a way to achieve interfaces functionalities and abstract classes.
 
 from abc import ABC, abstractmethod
 from dataclasses import dataclass, field
@@ -23,6 +28,10 @@ from b_srp import CustomerValidation, PaymentDataValidation, TransactionLogger
 
 
 class PaymentProcessor(ABC):
+# - @abstractmethod has following functions:
+# - Prevents instantiation: Does not allow creating instances of the abstract base class
+# - Forces implementation: Requires child classes to implement the method
+# - Documentation: Clearly communicates that this method must be implemented
 		@abstractmethod
 		def process_transaction(self, customer_data, payment_data):
 				...

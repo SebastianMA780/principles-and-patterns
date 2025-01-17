@@ -16,7 +16,7 @@
 # - Code duplication
 
 
-# See the initial code in design-principles/solid/0_initial_code.py to understand the problem with the code.
+# See the initial code in a_initial_code.py to understand the problem with the code.
 # and then see the spr apply in this file
 
 from dataclasses import dataclass
