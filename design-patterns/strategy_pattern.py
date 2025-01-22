@@ -4,7 +4,7 @@
 # and makes them interchangeable.
 
 from abc import ABC, abstractmethod
-from dataclasses import dataclass, field
+from dataclasses import dataclass
 
 class Notifier(ABC):
 		@abstractmethod
