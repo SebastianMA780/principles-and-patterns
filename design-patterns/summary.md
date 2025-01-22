@@ -4,7 +4,7 @@ Design patterns are general reusable solutions to common problems that occur in 
 
 ## Design patterns Categories
 
-- creational (5)
+- Creational (5)
 
 	"Focus on object creation mechanisms"
 
