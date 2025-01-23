@@ -8,14 +8,15 @@ Design patterns are general reusable solutions to common problems that occur in 
 
 	"Focus on object creation mechanisms"
 
-	- singleton
+	- Singleton
 	- Factory Method
 	- Abstract Factory
 	- Builder
 	- Prototype
+
 - Structural (7)
 
-	"Class and object composition"
+	"Focus on Class and object composition"
 
 	- Adapter
 	- Bridge
@@ -24,9 +25,10 @@ Design patterns are general reusable solutions to common problems that occur in 
 	- Facade
 	- Flyweight
 	- Proxy
+
 - Behavioral (11)
 
-	"Improving the communication between objects"
+	"Focus on improving the communication between objects"
 
 	- Chain of Responsibility
 	- Command

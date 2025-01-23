@@ -35,6 +35,7 @@ class PaymentService:
 					# Send the confirmation
 					self.notifier.send_confirmation(customer_data)
 
+#Strategy Pattern that allows the client to choose the appropriate strategy at runtime.
 def set_notifier(customer_data) -> Notifier:
 		if "email" in customer_data["contact_info"]:
 				return EmailNotifier()
